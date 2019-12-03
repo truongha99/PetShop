@@ -20,25 +20,33 @@
             android:id="@+id/edtMaThuCung"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Mã thú cưng" />
+            android:hint="Mã thú cưng"
+            android:inputType="text"
+            android:maxLength="7" />
 
         <EditText
             android:id="@+id/edtTenThuCung"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tên thú cưng" />
+            android:hint="Tên thú cưng"
+            android:inputType="text"
+            android:maxLength="16" />
 
         <EditText
             android:id="@+id/edtGia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Giá " />
+            android:hint="Giá "
+            android:inputType="number"
+            android:maxLength="9" />
 
         <EditText
             android:id="@+id/edtSoLuong"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Số lượng " />
+            android:hint="Số lượng "
+            android:inputType="number"
+            android:maxLength="9" />
     </LinearLayout>
 
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SuaLoaiThuCung">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,19 +15,24 @@
             android:id="@+id/edtMaLoaiThuCung"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Mã loại thú cưng" />
+            android:hint="Mã loại thú cưng"
+            android:inputType="number"
+            android:maxLength="7"/>
 
         <EditText
             android:id="@+id/edtTenLoaiThuCung"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tên loại thú cưng" />
+            android:hint="Tên loại thú cưng"
+            android:inputType="text"
+            android:maxLength="16"/>
 
         <EditText
             android:id="@+id/edtMoTa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Mô tả" />
+            android:hint="Mô tả"
+            android:inputType="textMultiLine" />
     </LinearLayout>
 
 
@@ -39,6 +44,6 @@
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
         android:clickable="true"
-        android:src="@drawable/ic_check_black_24dp"
-        android:onClick="updateThuCung"/>
+        android:onClick="updateThuCung"
+        android:src="@drawable/ic_check_black_24dp" />
 </RelativeLayout>

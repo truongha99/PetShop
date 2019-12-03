@@ -71,7 +71,7 @@ public class ThuCungDAO {
     }
 
     //update
-    public int updateSach(String maThuCung, String a, String b, double c, int d) {
+    public int updateThuCung(String maThuCung, String a, String b, double c, int d) {
         ContentValues values = new ContentValues();
         values.put("maThuCung", a);
         values.put("tenThuCung", b);
@@ -85,9 +85,22 @@ public class ThuCungDAO {
         return 1;
     }
 
+    public int updateInfoThuCung(ThuCung thuCung) {
+        ContentValues values = new ContentValues();
+        values.put("maThuCung", thuCung.getMaThuCung());
+        values.put("tenThuCung", thuCung.getMaThuCung());
+        values.put("gia", thuCung.getGia());
+        values.put("soLuong", thuCung.getSoLuong());
+        int result = db.update(TABLE_NAME, values, "maLoaiThuCung=?", new String[]{thuCung.getMaThuCung()});
+        if (result == 0) {
+            return -1;
+        }
+        return 1;
+    }
+
     //delete
-    public int deleteThuCung(String maThuCung){
-        int result = db.delete(TABLE_NAME,"maThuCung=?",new String[]{maThuCung});
+    public int deleteThuCung(String maThuCung) {
+        int result = db.delete(TABLE_NAME, "maThuCung=?", new String[]{maThuCung});
         if (result == 0)
             return -1;
         return 1;

@@ -92,8 +92,4 @@ public class AdapterThuCung extends BaseAdapter {
         super.notifyDataSetChanged();
     }
 
-    public void changeDataset(List<ThuCung> items) {
-        this.arrThuCung = items;
-        notifyDataSetChanged();
-    }
 }
